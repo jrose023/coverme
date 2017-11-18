@@ -43,7 +43,6 @@
                                 <rect key="frame" x="164" y="515" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
-                                    <segue destination="f8w-6A-fFp" kind="show" id="RyE-np-Rxz"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnV-XL-lug">
                                 <rect key="frame" x="219" y="397" width="97" height="30"/>
