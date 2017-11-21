@@ -65,7 +65,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-nj-CcA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar.png" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-nj-CcA">
                                 <rect key="frame" x="67" y="107" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -321,27 +321,15 @@
         <scene sceneID="geD-YJ-0Ox">
             <objects>
                 <viewController id="f8w-6A-fFp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OXE-FP-LW4" customClass="EmployeeView" customModule="CoverMe">
+                    <view key="view" contentMode="scaleToFill" id="OXE-FP-LW4" customClass="EmployeeView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-UI-6TE">
-                                <rect key="frame" x="125" y="550" width="124" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95072572969543145" green="0.48952784041951342" blue="0.21147746334025636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Punch In">
-                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                    <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-ix-f5G">
-                                <rect key="frame" x="16" y="222" width="157" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-ix-f5G">
+                                <rect key="frame" x="16" y="222" width="157" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48751715590447453" green="0.56507063967647264" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="See My Schedule">
@@ -352,11 +340,11 @@
                                     <segue destination="tT1-Wp-hEg" kind="show" identifier="EmployeeToSchedule" id="tWL-gE-l0t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-h9-5H2">
-                                <rect key="frame" x="16" y="386" width="157" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-h9-5H2">
+                                <rect key="frame" x="16" y="386" width="157" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.94255582620701872" blue="0.54211905534987737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Request Time-Off">
@@ -367,11 +355,11 @@
                                     <segue destination="HH8-BT-ECv" kind="show" identifier="EmployeeToTimeOff" id="KZB-wJ-mYQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-KR-LEv">
-                                <rect key="frame" x="202" y="386" width="157" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-KR-LEv">
+                                <rect key="frame" x="202" y="386" width="157" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40111398539087872" green="0.91116751269035534" blue="0.55330747302526917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Find Coverage">
@@ -382,11 +370,11 @@
                                     <segue destination="RKM-T7-Opq" kind="show" identifier="EmployeeToCoverage" id="Jl5-g0-s0k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-k1-hxB">
-                                <rect key="frame" x="202" y="222" width="157" height="109"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-k1-hxB">
+                                <rect key="frame" x="202" y="222" width="157" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57101831076669907" blue="0.4686593667212825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Set My Availability">
@@ -397,8 +385,17 @@
                                     <segue destination="xKN-ba-mhj" kind="show" identifier="EmployeeToAvailability" id="B9e-Er-Z0H"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, Joe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-rR-1UN">
+                                <rect key="frame" x="62" y="124" width="251" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cec-ol-gmU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="41" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
@@ -428,18 +425,62 @@
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Home" style="plain" id="iqH-w0-wW9">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6C2-9w-bon">
+                                                <rect key="frame" x="286" y="4.5" width="73" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Home">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, Joe!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-rR-1UN">
-                                <rect key="frame" x="62" y="124" width="251" height="40"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar.png" translatesAutoresizingMaskIntoConstraints="NO" id="MUp-rV-BXq">
+                                <rect key="frame" x="108" y="222" width="65" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swap.png" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-KR-s5I">
+                                <rect key="frame" x="294" y="386" width="65" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeoff.png" translatesAutoresizingMaskIntoConstraints="NO" id="wVb-uJ-uV8">
+                                <rect key="frame" x="108" y="386" width="65" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="availability.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vi7-GL-9az">
+                                <rect key="frame" x="294" y="222" width="65" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="0.46537885273972601" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" selectionIndicatorImage="calendar.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Wo-xX-0ns">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Calendar" image="calendaricon.png" selectedImage="calendar.png" id="SLt-Mi-F5N"/>
+                                    <tabBarItem title="Availability" image="availicon.png" id="h3v-TF-gkP"/>
+                                    <tabBarItem title="Hours Logged" id="wwy-fb-a2K"/>
+                                    <tabBarItem systemItem="more" id="NcH-Qr-qJF"/>
+                                </items>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-UI-6TE">
+                                <rect key="frame" x="105" y="551" width="165" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95072572969543145" green="0.48952784041951342" blue="0.21147746334025636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Punch In">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.68198844178082196" colorSpace="calibratedRGB"/>
                         <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -482,4 +523,12 @@
             <point key="canvasLocation" x="977" y="-52"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="availability.png" width="75" height="75"/>
+        <image name="availicon.png" width="30" height="30"/>
+        <image name="calendar.png" width="512" height="512"/>
+        <image name="calendaricon.png" width="30" height="30"/>
+        <image name="swap.png" width="512" height="512"/>
+        <image name="timeoff.png" width="512" height="512"/>
+    </resources>
 </document>
