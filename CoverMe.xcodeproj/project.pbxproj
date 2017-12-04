@@ -24,6 +24,7 @@
 		D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E201FB8DFAD00B4F9A5 /* main.m */; };
 		D8A59E2B1FB8DFAD00B4F9A5 /* CoverMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E2A1FB8DFAD00B4F9A5 /* CoverMeTests.m */; };
 		D8A59E361FB8DFAD00B4F9A5 /* CoverMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E351FB8DFAD00B4F9A5 /* CoverMeUITests.m */; };
+		D8F79B6D1FD4D12E0002A94A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F79B6C1FD4D12E0002A94A /* GoogleService-Info.plist */; };
 		FD1BBEFB0B94721419AE4F53 /* libPods-CoverMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B67F9AA48F751E0128E178 /* libPods-CoverMeTests.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		D8A59E311FB8DFAD00B4F9A5 /* CoverMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoverMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A59E351FB8DFAD00B4F9A5 /* CoverMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverMeUITests.m; sourceTree = "<group>"; };
 		D8A59E371FB8DFAD00B4F9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F79B6C1FD4D12E0002A94A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8F79B6E1FD4D13A0002A94A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB507A04028FEAB2C8774FD2 /* Pods-CoverMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoverMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoverMe/Pods-CoverMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +115,7 @@
 		5AF93EC11FCFCE340083FDE2 /* Google Things */ = {
 			isa = PBXGroup;
 			children = (
+				D8F79B6C1FD4D12E0002A94A /* GoogleService-Info.plist */,
 				5A04F2E41FCE68DA00F15CE7 /* GoogleService-Info.plist */,
 				5A04F2E61FCE691600F15CE7 /* GoogleService-Info.plist */,
 			);
@@ -162,15 +166,16 @@
 				5AF93EBF1FCF5A160083FDE2 /* User.m */,
 				D8A59E141FB8DFAD00B4F9A5 /* ViewController.h */,
 				D8A59E151FB8DFAD00B4F9A5 /* ViewController.m */,
-				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
 				5A7F8A831FC5F4A900FEFA2B /* OverViewController.h */,
 				5A7F8A841FC5F4A900FEFA2B /* OverViewController.m */,
 				5A680E581FC4111A002E1E9E /* EmployeeViewController.h */,
 				5A680E591FC4111A002E1E9E /* EmployeeViewController.m */,
 				D8A59E201FB8DFAD00B4F9A5 /* main.m */,
 				D8A59E1A1FB8DFAD00B4F9A5 /* Assets.xcassets */,
+				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
 				D8A59E1C1FB8DFAD00B4F9A5 /* LaunchScreen.storyboard */,
 				D8A59E1F1FB8DFAD00B4F9A5 /* Info.plist */,
+				D8F79B6E1FD4D13A0002A94A /* GoogleService-Info.plist */,
 				5AF93EC11FCFCE340083FDE2 /* Google Things */,
 				5A680E541FC408CF002E1E9E /* images */,
 			);
@@ -325,6 +330,7 @@
 				5A04F2E71FCE691700F15CE7 /* GoogleService-Info.plist in Resources */,
 				D8A59E1B1FB8DFAD00B4F9A5 /* Assets.xcassets in Resources */,
 				D8A59E191FB8DFAD00B4F9A5 /* Main.storyboard in Resources */,
+				D8F79B6D1FD4D12E0002A94A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

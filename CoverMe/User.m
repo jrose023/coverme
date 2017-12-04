@@ -7,6 +7,8 @@
 //
 
 #import "User.h"
+@import Firebase;
+
 @interface User()
 @property (nonatomic) NSString *firstName;
 @property (nonatomic) NSString *lastName;
@@ -15,6 +17,9 @@
 @property (nonatomic) NSString *image;
 
 @property (nonatomic) float hoursWorked;
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+
+
 
 @end
 

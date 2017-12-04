@@ -4,6 +4,7 @@ platform :ios, '9.0'
 target 'CoverMe' do
 
 pod 'Firebase/Core'
+pod 'Firebase/Database’
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
@@ -22,3 +23,4 @@ pod 'Firebase/Core'
 end
 
 pod 'Firebase/Core'
+pod 'Firebase/Database’
