@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "EmployeeViewController.h"
+#import "EmployerVC.h"
 @import Firebase;
 
 @interface ViewController ()
@@ -15,14 +17,20 @@
 @end
 
 @implementation ViewController
-@synthesize email;
-@synthesize password;
+//@synthesize email;
+//@synthesize password;
 
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //populating email and password textfield for testing
+    self.email.text = @"tlc383@nyu.edu";
+    self.password.text = @"123444";
+    
+    
 }
 
 
@@ -30,6 +38,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toEmployeeVC"])
+    {
+            EmployeeViewController *employeeVC = segue.destinationViewController;
+    }
+    else if([[segue identifier] isEqualToString:@"toEmployerVC"])
+    {
+        EmployerVC *employerVC = segue.destinationViewController;
+    }
+}
+
 
 -(void) setEmail:(UITextField *)email
 {
@@ -64,10 +86,10 @@
    
 }
 
-- (IBAction)pushedIt:(id)sender {
+- (IBAction)pushedSignIn:(id)sender {
     //this checks if the there is a user that exsist with the username nrg294
     _ref = [[FIRDatabase database] reference];
-    NSString *username =[email text];
+    NSString *username =[self.email text];
     NSLog(@"the username we are checking is %@", username);
     FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
                                               child:@"users"]
@@ -84,7 +106,7 @@
                                                child:@"users"]
                                               child:username]
                                              child:@"password"];
-    NSString *givenPassword=[password text];
+    NSString *givenPassword=[self.password text];
     [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
                                         NSString *password= snapshot.value;
@@ -92,10 +114,16 @@
                                         NSLog(@"checking if the password exsits");
                                         NSLog(@"the password does exsist %d", isExists);
                                     }];
-    
+    // add these codes accordingly Nathan. Because I dont understand your code
+    //if user is employer:
+    // [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
+    //if user is employee:
+    // [self performSegueWithIdentifier:@"toEmployeeVC" sender:sender];
+
+}
    
     
-}
+
 
 
 
