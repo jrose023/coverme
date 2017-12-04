@@ -121,6 +121,10 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="email" destination="vnV-XL-lug" id="qwJ-yG-WC6"/>
+                        <outlet property="password" destination="htS-MH-1SR" id="5aR-hb-lJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -947,6 +951,6 @@
         <image name="timeoff.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q6I-1j-BGS"/>
+        <segue reference="2uE-Xd-ib1"/>
     </inferredMetricsTieBreakers>
 </document>
