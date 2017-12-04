@@ -48,6 +48,7 @@
                                     <color key="titleShadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pushedIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktu-xa-asG"/>
                                     <segue destination="f8w-6A-fFp" kind="show" identifier="WelcomeToHome" id="2uE-Xd-ib1"/>
                                 </connections>
                             </button>
