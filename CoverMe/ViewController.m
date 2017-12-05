@@ -27,8 +27,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //populating email and password textfield for testing
-    self.email.text = @"tlc383@nyu.edu";
-    self.password.text = @"123444";
+    //self.email.text = @"tlc383@nyu.edu";
+    //self.password.text = @"123444";
     
     
 }
@@ -58,7 +58,6 @@
     _ref = [[FIRDatabase database] reference];
     //email.text = [NSString stringWithFormat:@"hi"];
     [[[_ref child:@"users"] child:@"nrg294"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        NSLog(@"hi");
         // Get user's username value
         NSString *user= snapshot.value[@"username"];
         email.text = [NSString stringWithFormat:@"%@", user];
@@ -74,7 +73,6 @@
     _ref = [[FIRDatabase database] reference];
     //email.text = [NSString stringWithFormat:@"hi"];
     [[[_ref child:@"users"] child:@"nrg294"] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        NSLog(@"hi");
         // Get user's password value
         NSString *user= snapshot.value[@"password"];
         password.text = [NSString stringWithFormat:@"%@", user];
