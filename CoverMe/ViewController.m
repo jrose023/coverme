@@ -53,7 +53,7 @@
 }
 
 
--(void) setEmail:(UITextField *)email
+/*-(void) setEmail:(UITextField *)email
 {
     _ref = [[FIRDatabase database] reference];
     //email.text = [NSString stringWithFormat:@"hi"];
@@ -66,9 +66,9 @@
     } withCancelBlock:^(NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
     }];
-}
+}*/
 
--(void) setPassword:(UITextField *)password
+/*-(void) setPassword:(UITextField *)password
 {
     _ref = [[FIRDatabase database] reference];
     //email.text = [NSString stringWithFormat:@"hi"];
@@ -82,16 +82,16 @@
         NSLog(@"%@", error.localizedDescription);
     }];
    
-}
+}*/
 
 - (IBAction)pushedSignIn:(id)sender {
     //this checks if the there is a user that exsist with the username nrg294
     _ref = [[FIRDatabase database] reference];
-    NSString *username =[self.email text];
-    NSLog(@"the username we are checking is %@", username);
+    NSString *emailEntered =[self.email text];
+    NSLog(@"the username we are checking is %@", emailEntered);
     FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
                                               child:@"users"]
-                                             child:username];
+                                             child:emailEntered];//gets the child if it exsist from firebase that is under the users section and has the email entered in the email textbox
     
     [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -102,11 +102,11 @@
     
     FIRDatabaseReference *refUniqPassword = [[[[[FIRDatabase database] reference]
                                                child:@"users"]
-                                              child:username]
-                                             child:@"password"];
+                                              child:emailEntered]
+                                             child:@"password"];// this will go to the child of the email entered and get the password value.
     NSString *givenPassword=[self.password text];
     [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
-                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {// this chekcs if the password entered is equal to the password at that value
                                         NSString *password= snapshot.value;
                                         bool isExists = [password isEqualToString:givenPassword];
                                         NSLog(@"checking if the password exsits");
