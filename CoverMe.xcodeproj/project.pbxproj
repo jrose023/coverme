@@ -15,6 +15,9 @@
 		5A04F2E91FCE691700F15CE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F2E61FCE691600F15CE7 /* GoogleService-Info.plist */; };
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
 		5A7F8A851FC5F4A900FEFA2B /* OverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F8A841FC5F4A900FEFA2B /* OverViewController.m */; };
+		5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405E1FD87B65000DDB5F /* ModelClass.m */; };
+		5AEA40631FD87B66000DDB5F /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405F1FD87B66000DDB5F /* WelcomeViewController.m */; };
+		5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA40601FD87B66000DDB5F /* TimeSlot.m */; };
 		5AF93EC01FCF5A160083FDE2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF93EBF1FCF5A160083FDE2 /* User.m */; };
 		D8A59E131FB8DFAD00B4F9A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E121FB8DFAD00B4F9A5 /* AppDelegate.m */; };
 		D8A59E161FB8DFAD00B4F9A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E151FB8DFAD00B4F9A5 /* ViewController.m */; };
@@ -57,6 +60,12 @@
 		5A680E591FC4111A002E1E9E /* EmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
 		5A7F8A831FC5F4A900FEFA2B /* OverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OverViewController.h; sourceTree = "<group>"; };
 		5A7F8A841FC5F4A900FEFA2B /* OverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OverViewController.m; sourceTree = "<group>"; };
+		5AEA405C1FD87B65000DDB5F /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		5AEA405D1FD87B65000DDB5F /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
+		5AEA405E1FD87B65000DDB5F /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
+		5AEA405F1FD87B66000DDB5F /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		5AEA40601FD87B66000DDB5F /* TimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlot.m; sourceTree = "<group>"; };
+		5AEA40611FD87B66000DDB5F /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
 		5AF93EBE1FCF5A160083FDE2 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		5AF93EBF1FCF5A160083FDE2 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A41477940E84C1C5EBC07C10 /* Pods-CoverMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoverMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoverMe/Pods-CoverMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +169,12 @@
 		D8A59E101FB8DFAD00B4F9A5 /* CoverMe */ = {
 			isa = PBXGroup;
 			children = (
+				5AEA40611FD87B66000DDB5F /* ModelClass.h */,
+				5AEA405E1FD87B65000DDB5F /* ModelClass.m */,
+				5AEA405D1FD87B65000DDB5F /* TimeSlot.h */,
+				5AEA40601FD87B66000DDB5F /* TimeSlot.m */,
+				5AEA405C1FD87B65000DDB5F /* WelcomeViewController.h */,
+				5AEA405F1FD87B66000DDB5F /* WelcomeViewController.m */,
 				D8A59E111FB8DFAD00B4F9A5 /* AppDelegate.h */,
 				D8A59E121FB8DFAD00B4F9A5 /* AppDelegate.m */,
 				5AF93EBE1FCF5A160083FDE2 /* User.h */,
@@ -504,10 +519,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */,
 				D8A59E161FB8DFAD00B4F9A5 /* ViewController.m in Sources */,
 				5A7F8A851FC5F4A900FEFA2B /* OverViewController.m in Sources */,
+				5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */,
 				D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */,
 				5AF93EC01FCF5A160083FDE2 /* User.m in Sources */,
+				5AEA40631FD87B66000DDB5F /* WelcomeViewController.m in Sources */,
 				5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */,
 				D8A59E131FB8DFAD00B4F9A5 /* AppDelegate.m in Sources */,
 			);
