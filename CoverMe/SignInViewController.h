@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SignInViewController.h
 //  CoverMe
 //
 //  Created by Nathan Grimshaw on 11/12/17.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ModelClass.h"
 
-@interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *email;
+@interface SignInViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (nonatomic) ModelClass *model;
 @end

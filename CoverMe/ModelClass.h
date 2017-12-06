@@ -10,7 +10,7 @@
 
 @interface ModelClass : NSObject
 
-@property (nonatomic) NSString* email;
+@property (nonatomic) NSString* username;
 @property (nonatomic) NSString* password;
 
 @end
