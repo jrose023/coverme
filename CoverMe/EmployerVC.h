@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModelClass.h"
 
 @interface EmployerVC : UIViewController
+@property (strong, nonatomic) ModelClass *model;
 
 @end

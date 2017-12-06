@@ -44,11 +44,13 @@
 {
     if ([[segue identifier] isEqualToString:@"toEmployeeVC"])
     {
-            EmployeeViewController *employeeVC = segue.destinationViewController;
+        EmployeeViewController *employeeVC = segue.destinationViewController;
+        employeeVC.model = self.model;
     }
     else if([[segue identifier] isEqualToString:@"toEmployerVC"])
     {
         EmployerVC *employerVC = segue.destinationViewController;
+        employerVC.model = self.model;
     }
 }
 
@@ -89,6 +91,7 @@
     _ref = [[FIRDatabase database] reference];
     NSString *emailEntered =[self.email text];
     NSLog(@"the username we are checking is %@", emailEntered);
+    self.model.email = emailEntered; //this keeps track on all pages.
     FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
                                               child:@"users"]
                                              child:emailEntered];//gets the child if it exsist from firebase that is under the users section and has the email entered in the email textbox
@@ -115,6 +118,7 @@
     // add these codes accordingly Nathan. Because I dont understand your code
     //if user is employer:
     // [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
+    //
     //if user is employee:
     // [self performSegueWithIdentifier:@"toEmployeeVC" sender:sender];
 

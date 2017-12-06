@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModelClass.h"
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (nonatomic) ModelClass *model;
 @end
 
