@@ -48,6 +48,7 @@
 bool isAdmin;
 bool isExists;
 int counter=0;
+bool userNameCorrect;
 - (IBAction)pushedSignIn:(id)sender {
     
     NSString *usernameEntered =[self.username text];
@@ -60,64 +61,72 @@ int counter=0;
     //Check if the there is a user that exist with the username entered
     //search firebse "users" database for the usernameEntered
     _ref = [[FIRDatabase database] reference];
-    
-    FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
-                                              child:@"users"]
-                                             child:usernameEntered];
-    [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
-                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-     {
-         counter++;
-         isExists = snapshot.exists;
-     }];
-    
-    //search firebase "users" database to validate password given the usernameEntered
-    FIRDatabaseReference *refUniqPassword = [[[[[FIRDatabase database] reference]
-                                               child:@"users"]
-                                              child:usernameEntered]
-                                             child:@"password"];
-    [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
-                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-     {
-         counter++;
-         NSString *password= snapshot.value;
-         isExists = isExists && [password isEqualToString:passwordEntered];
+    if ([usernameEntered length] >0 && [passwordEntered length] >0){
         
-         
-     }];
-    //search firebase to determine whether user is admin or not
-    FIRDatabaseReference *refAdminBool = [[[[[FIRDatabase database] reference]
-                                               child:@"users"]
-                                              child:usernameEntered]
-                                             child:@"admin"];
-   
-    
-    [refAdminBool observeSingleEventOfType:FIRDataEventTypeValue
-                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-     {
-         counter++;
-         NSString *admin= snapshot.value;
-         isAdmin = [admin isEqualToString:@"TRUE"];
-         NSLog(@"%d, %@",isAdmin, admin);
-         
-     }];
-    
-    if (!isExists && counter==3) {
-        counter=0;
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Incorrect Username or Password!"
-                                                                       message:@"Please Try Again."
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        
+        FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
+                                                  child:@"users"]
+                                                 child:usernameEntered];
+        [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
+                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+         {
+             counter++;
+             isExists = snapshot.exists;
+             userNameCorrect=isExists;
+             NSLog(@"hi3");
+         }];
+        
+        //search firebase "users" database to validate password given the usernameEntered
+        FIRDatabaseReference *refUniqPassword = [[[[[FIRDatabase database] reference]
+                                                   child:@"users"]
+                                                  child:usernameEntered]
+                                                 child:@"password"];
+        [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
+                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+         {
+             counter++;
+             NSString *password= snapshot.value;
+             isExists = isExists && [password isEqualToString:passwordEntered];
+             NSLog(@"hi2");
+             
+             
+         }];
+        //search firebase to determine whether user is admin or not
+        FIRDatabaseReference *refAdminBool = [[[[[FIRDatabase database] reference]
+                                                child:@"users"]
+                                               child:usernameEntered]
+                                              child:@"admin"];
+        
+        
+        [refAdminBool observeSingleEventOfType:FIRDataEventTypeValue
+                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+         {
+             counter++;
+             NSString *admin= snapshot.value;
+             isAdmin = [admin isEqualToString:@"TRUE"];
+             //NSLog(@"this is the admin log %d, %@",isAdmin, admin);
+             NSLog(@"hi1");
+             
+         }];
     }
-    else{
+    
+    if(counter==3){
         counter=0;
-        NSLog(@"hey the password and username were correct");
-        if(isAdmin) [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
-        else [self performSegueWithIdentifier:@"toEmployeeVC" sender:sender];
-       
+        if (!isExists) {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Incorrect Username or Password!"
+                                                                           message:@"Please Try Again."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else{
+            if(isAdmin) [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
+            else [self performSegueWithIdentifier:@"toEmployeeVC" sender:sender];
+            
+            
+        }
     }
     
 }//end pushedSignIn

@@ -10,6 +10,7 @@
 		1DA1B657F7B4CBDB7F15A7FF /* libPods-CoverMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB665998D408CC41862CC4B /* libPods-CoverMe.a */; };
 		2BD1D870220F8141E54EF502 /* libPods-CoverMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B295DCC195DB3A618C7600 /* libPods-CoverMeUITests.a */; };
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
+		5AE851EA1FD9D518004574C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */; };
 		5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405E1FD87B65000DDB5F /* ModelClass.m */; };
 		5AEA40631FD87B66000DDB5F /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405F1FD87B66000DDB5F /* WelcomeViewController.m */; };
 		5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA40601FD87B66000DDB5F /* TimeSlot.m */; };
@@ -23,9 +24,6 @@
 		D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E201FB8DFAD00B4F9A5 /* main.m */; };
 		D8A59E2B1FB8DFAD00B4F9A5 /* CoverMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E2A1FB8DFAD00B4F9A5 /* CoverMeTests.m */; };
 		D8A59E361FB8DFAD00B4F9A5 /* CoverMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A59E351FB8DFAD00B4F9A5 /* CoverMeUITests.m */; };
-		D8CBFEC81FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8CBFEC71FD8C71B00A0B6B7 /* GoogleService-Info.plist */; };
-		D8CBFEC91FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8CBFEC71FD8C71B00A0B6B7 /* GoogleService-Info.plist */; };
-		D8CBFECA1FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8CBFEC71FD8C71B00A0B6B7 /* GoogleService-Info.plist */; };
 		FD1BBEFB0B94721419AE4F53 /* libPods-CoverMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B67F9AA48F751E0128E178 /* libPods-CoverMeTests.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +52,7 @@
 		5A680E541FC408CF002E1E9E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		5A680E581FC4111A002E1E9E /* EmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		5A680E591FC4111A002E1E9E /* EmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
+		5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5AEA405C1FD87B65000DDB5F /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		5AEA405D1FD87B65000DDB5F /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
 		5AEA405E1FD87B65000DDB5F /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 		D8A59E311FB8DFAD00B4F9A5 /* CoverMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoverMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A59E351FB8DFAD00B4F9A5 /* CoverMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverMeUITests.m; sourceTree = "<group>"; };
 		D8A59E371FB8DFAD00B4F9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8CBFEC71FD8C71B00A0B6B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../.Trash/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB507A04028FEAB2C8774FD2 /* Pods-CoverMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoverMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoverMe/Pods-CoverMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +171,7 @@
 				D8A59E111FB8DFAD00B4F9A5 /* AppDelegate.h */,
 				D8A59E121FB8DFAD00B4F9A5 /* AppDelegate.m */,
 				5AF93EBE1FCF5A160083FDE2 /* User.h */,
-				D8CBFEC71FD8C71B00A0B6B7 /* GoogleService-Info.plist */,
+				5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */,
 				5AF93EBF1FCF5A160083FDE2 /* User.m */,
 				D8A59E141FB8DFAD00B4F9A5 /* SignInViewController.h */,
 				D8A59E151FB8DFAD00B4F9A5 /* SignInViewController.m */,
@@ -336,8 +334,8 @@
 			files = (
 				D8A59E1E1FB8DFAD00B4F9A5 /* LaunchScreen.storyboard in Resources */,
 				D8A59E1B1FB8DFAD00B4F9A5 /* Assets.xcassets in Resources */,
+				5AE851EA1FD9D518004574C0 /* GoogleService-Info.plist in Resources */,
 				D8A59E191FB8DFAD00B4F9A5 /* Main.storyboard in Resources */,
-				D8CBFEC81FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +343,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CBFEC91FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CBFECA1FD8C71B00A0B6B7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
