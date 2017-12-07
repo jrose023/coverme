@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DA1B657F7B4CBDB7F15A7FF /* libPods-CoverMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB665998D408CC41862CC4B /* libPods-CoverMe.a */; };
 		2BD1D870220F8141E54EF502 /* libPods-CoverMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B295DCC195DB3A618C7600 /* libPods-CoverMeUITests.a */; };
+		5A0A0D261FD9E9D800FB8020 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */; };
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
 		5AE851EA1FD9D518004574C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */; };
 		5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405E1FD87B65000DDB5F /* ModelClass.m */; };
@@ -49,6 +50,8 @@
 		23B295DCC195DB3A618C7600 /* libPods-CoverMeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoverMeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B67F9AA48F751E0128E178 /* libPods-CoverMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoverMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		587841C9F4B2A2E995A41D66 /* Pods-CoverMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoverMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoverMeTests/Pods-CoverMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0A0D241FD9E9D800FB8020 /* AvailabilityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
+		5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
 		5A680E541FC408CF002E1E9E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		5A680E581FC4111A002E1E9E /* EmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		5A680E591FC4111A002E1E9E /* EmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
@@ -167,7 +170,6 @@
 				5AEA40601FD87B66000DDB5F /* TimeSlot.m */,
 				5AEA405C1FD87B65000DDB5F /* WelcomeViewController.h */,
 				5AEA405F1FD87B66000DDB5F /* WelcomeViewController.m */,
-				D8571E561FD9D17E003AF93D /* EmployerVC.m */,
 				D8A59E111FB8DFAD00B4F9A5 /* AppDelegate.h */,
 				D8A59E121FB8DFAD00B4F9A5 /* AppDelegate.m */,
 				5AF93EBE1FCF5A160083FDE2 /* User.h */,
@@ -175,9 +177,12 @@
 				5AF93EBF1FCF5A160083FDE2 /* User.m */,
 				D8A59E141FB8DFAD00B4F9A5 /* SignInViewController.h */,
 				D8A59E151FB8DFAD00B4F9A5 /* SignInViewController.m */,
+				D8571E561FD9D17E003AF93D /* EmployerVC.m */,
 				D8571E551FD9D179003AF93D /* EmployerVC.h */,
 				5A680E581FC4111A002E1E9E /* EmployeeViewController.h */,
 				5A680E591FC4111A002E1E9E /* EmployeeViewController.m */,
+				5A0A0D241FD9E9D800FB8020 /* AvailabilityViewController.h */,
+				5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */,
 				D8A59E201FB8DFAD00B4F9A5 /* main.m */,
 				D8A59E1A1FB8DFAD00B4F9A5 /* Assets.xcassets */,
 				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
@@ -508,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */,
+				5A0A0D261FD9E9D800FB8020 /* AvailabilityViewController.m in Sources */,
 				D8A59E161FB8DFAD00B4F9A5 /* SignInViewController.m in Sources */,
 				5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */,
 				D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */,

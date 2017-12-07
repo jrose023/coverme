@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="44" y="891.90404797601207"/>
         </scene>
-        <!--View Controller-->
+        <!--Availability View Controller-->
         <scene sceneID="PMp-mD-PjX">
             <objects>
-                <viewController id="xKN-ba-mhj" sceneMemberID="viewController">
+                <viewController id="xKN-ba-mhj" customClass="AvailabilityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecQ-D5-wOY" customClass="AvailabilityView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,6 +329,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitPushed:" destination="xKN-ba-mhj" eventType="touchUpInside" id="ONK-ub-76A"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TGd-j2-tP7">
                                 <rect key="frame" x="320" y="282" width="49" height="31"/>
@@ -430,6 +433,29 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="FrClose" destination="5Ic-Aq-g4U" id="vef-Rn-Uwk"/>
+                        <outlet property="FrNoon" destination="4hD-Vp-Dyk" id="p1l-dg-ZeL"/>
+                        <outlet property="FrOpen" destination="z2o-7u-m76" id="0fp-am-o0X"/>
+                        <outlet property="MoClose" destination="TGd-j2-tP7" id="3Wk-eC-Wh1"/>
+                        <outlet property="MoNoon" destination="teX-Nc-7kA" id="4Fz-5E-RDz"/>
+                        <outlet property="MoOpen" destination="kRj-JW-AwM" id="LIC-2H-0WE"/>
+                        <outlet property="SaClose" destination="WTf-fo-X1W" id="EmT-X0-aM5"/>
+                        <outlet property="SaNoon" destination="vrp-Ey-SYw" id="iRl-9J-5EB"/>
+                        <outlet property="SaOpen" destination="QT4-uX-qS8" id="K4t-0w-MvX"/>
+                        <outlet property="SuClose" destination="pcV-45-7Ai" id="TfZ-48-4hM"/>
+                        <outlet property="SuNoon" destination="GIk-TJ-Hyj" id="0e5-1L-1hw"/>
+                        <outlet property="SuOpen" destination="VTy-Tl-dsJ" id="3eH-lB-0io"/>
+                        <outlet property="ThClose" destination="Hzh-qV-yur" id="bCU-nj-Zh7"/>
+                        <outlet property="ThNoon" destination="Bq7-F1-mWW" id="9Hi-gG-VbV"/>
+                        <outlet property="ThOpen" destination="ltT-6X-WeJ" id="lxc-Ye-VAo"/>
+                        <outlet property="TuClose" destination="6fj-q0-SjD" id="bB6-2L-Ipl"/>
+                        <outlet property="TuNoon" destination="zcI-Ym-Tws" id="yw1-xw-g4Q"/>
+                        <outlet property="TuOpen" destination="MKz-ek-1RY" id="lPx-AY-zAB"/>
+                        <outlet property="WeClose" destination="RgS-Nb-VKk" id="KHH-dp-Cad"/>
+                        <outlet property="WeNoon" destination="x0b-Kx-hQn" id="en0-k8-hU6"/>
+                        <outlet property="WeOpen" destination="tkg-dR-Mnf" id="eZc-OY-yXG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzf-Ah-b02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
