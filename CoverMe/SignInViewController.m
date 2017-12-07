@@ -45,9 +45,11 @@
         employerVC.model = self.model;
     }
 }
-bool isExists = FALSE;
 bool isAdmin;
+bool isExists;
+int counter=0;
 - (IBAction)pushedSignIn:(id)sender {
+    
     NSString *usernameEntered =[self.username text];
     NSString *passwordEntered=[self.password text];
     //keep track of the name on all pages.
@@ -65,7 +67,8 @@ bool isAdmin;
     [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
      {
-        isExists = snapshot.exists;
+         counter++;
+         isExists = snapshot.exists;
      }];
     
     //search firebase "users" database to validate password given the usernameEntered
@@ -76,8 +79,9 @@ bool isAdmin;
     [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
      {
+         counter++;
          NSString *password= snapshot.value;
-        isExists = isExists && [password isEqualToString:passwordEntered];
+         isExists = isExists && [password isEqualToString:passwordEntered];
         
          
      }];
@@ -91,13 +95,15 @@ bool isAdmin;
     [refAdminBool observeSingleEventOfType:FIRDataEventTypeValue
                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
      {
+         counter++;
          NSString *admin= snapshot.value;
          isAdmin = [admin isEqualToString:@"TRUE"];
          NSLog(@"%d, %@",isAdmin, admin);
          
      }];
     
-    if (!isExists) {
+    if (!isExists && counter==3) {
+        counter=0;
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Incorrect Username or Password!"
                                                                        message:@"Please Try Again."
                                                                 preferredStyle:UIAlertControllerStyleAlert];
@@ -107,7 +113,9 @@ bool isAdmin;
         [self presentViewController:alert animated:YES completion:nil];
     }
     else{
-        if(!isAdmin) [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
+        counter=0;
+        NSLog(@"hey the password and username were correct");
+        if(isAdmin) [self performSegueWithIdentifier:@"toEmployerVC" sender:sender];
         else [self performSegueWithIdentifier:@"toEmployeeVC" sender:sender];
        
     }
