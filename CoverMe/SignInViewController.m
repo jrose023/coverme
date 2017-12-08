@@ -26,11 +26,11 @@ int counter=0;
 bool userNameCorrect;
 - (IBAction)pushedSignIn:(id)sender {
     
-//    NSString *usernameEntered =[self.username text];
-//    NSString *passwordEntered=[self.password text];
+    NSString *usernameEntered =[self.username text];
+    NSString *passwordEntered=[self.password text];
 
-    NSString *usernameEntered =@"nrg294";
-    NSString *passwordEntered=@"hi";
+//    NSString *usernameEntered =@"nrg294";
+//    NSString *passwordEntered=@"hi";
     
 //    NSLog(@"_model.username = %@",  self.model.username);
     
@@ -101,20 +101,16 @@ bool userNameCorrect;
             //keep track of the name on all pages.
             self.model = [ModelClass new];
             self.model.username = usernameEntered;
-            self.model.weekAvailability = [NSMutableArray new];
+            
             
             //pull up their availability calendar,
             FIRDatabaseReference *refAvailCalendar = [[[[[FIRDatabase database] reference]
                                                 child:@"users"]
                                                child:self.model.username]
                                               child:@"avail"];
-//            [refAvailCalendar observeSingleEventOfType:FIRDataEventTypeValue
-//                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-//             {
-//                 NSString *calval = snapshot.value;
-//                 NSLog(@"snapshot of refAvailCalendar = %@",calval);
-//             }
-//             ];
+            
+            //put the availability information in the 2D array, stored in the model delegate
+            self.model.weekAvailability = [NSMutableArray new];
             for (int i = 0; i < 7; i++)
             {
                 NSString *day = [NSString stringWithFormat:@"%d",i];
@@ -123,7 +119,7 @@ bool userNameCorrect;
                 FIRDatabaseReference *refNoon = [[refAvailCalendar child:day] child:@"1"];
                 FIRDatabaseReference *refClose = [[refAvailCalendar child:day] child:@"2"];
                 
-                __block bool availableForOpen= false;
+                __block bool availableForOpen = false;
                 __block bool availableForNoon =false;
                 __block bool availableForClose = false;
                 
@@ -131,7 +127,7 @@ bool userNameCorrect;
                                         withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
                  {
                      availableForOpen =[snapshot.value boolValue];
-//                     NSLog(@"available for open = %d", availableForOpen);
+                     NSLog(@"available for open = %d, with parentheses = %@", availableForOpen, @(availableForOpen));
                  }
                  ];
                 [refNoon observeSingleEventOfType:FIRDataEventTypeValue
@@ -146,17 +142,31 @@ bool userNameCorrect;
                       availableForClose = [snapshot.value boolValue];
                  }
                  ];
+                /* HAVING ISSUE HERE!
+                 * everything above this point works fine and all log statements will show that the data
+                 * in availabileForOpen/Noon/Close is accurate and reflects what is in Firebase
+                 *
+                 * putting it in the self.model.availbilty array is causing issues
+                 * you apparently cant have an array of booleans which means they need to be wrapped in @()
+                 * which makes them NSNumbers which is just confusing and thisngs arent outputting correctly
+                 */
                 
                 //update model week availability
-                [self.model.weekAvailability insertObject: [NSArray arrayWithObjects: @(availableForOpen), @(availableForNoon), @(availableForClose),nil] atIndex:i];
+                NSMutableArray *avails = [NSMutableArray new];
+                [avails insertObject:@(availableForOpen) atIndex:0];
+                [avails insertObject:@(availableForNoon) atIndex:1];
+                [avails insertObject:@(availableForClose) atIndex:2];
+//                NSLog(@"object in avals = %@", [avails objectAtIndex:0]);
                 
-                //NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0]);
-//                for(NSArray *subArray in self.model.weekAvailability) {
-//                    NSLog(@"day in week: %@",subArray);
-//                }
+                
+                [self.model.weekAvailability insertObject: avails atIndex:i];
+                
+                
+
             }//end for loop
 
-            
+//            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0]);
+//            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:1] objectAtIndex:0]);
 
             if(isAdmin) [self performSegueWithIdentifier:@"toEmployerViewController" sender:sender];
             
