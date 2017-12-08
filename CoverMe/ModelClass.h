@@ -11,6 +11,6 @@
 @interface ModelClass : NSObject
 
 @property (nonatomic) NSString* username;
-@property (nonatomic) NSString* password;
+@property (nonatomic) NSMutableArray *weekAvailability;
 
 @end

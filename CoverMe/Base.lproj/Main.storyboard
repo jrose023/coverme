@@ -90,13 +90,13 @@
                     <connections>
                         <outlet property="password" destination="htS-MH-1SR" id="5aR-hb-lJx"/>
                         <outlet property="username" destination="vnV-XL-lug" id="qwJ-yG-WC6"/>
-                        <segue destination="6XZ-SX-hz7" kind="show" identifier="toEmployerVC" id="3k8-7i-nd5"/>
-                        <segue destination="f8w-6A-fFp" kind="show" identifier="toEmployeeVC" id="tXb-hL-6bI"/>
+                        <segue destination="6XZ-SX-hz7" kind="show" identifier="toAdminViewController" id="3k8-7i-nd5"/>
+                        <segue destination="f8w-6A-fFp" kind="show" identifier="toEmployeeViewController" id="tXb-hL-6bI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.22660098522168"/>
+            <point key="canvasLocation" x="-802" y="364"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4P-4c-VL0">
@@ -156,7 +156,7 @@
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="f8w-6A-fFp" kind="show" id="9mm-ZA-aFl"/>
+                                                <segue destination="f8w-6A-fFp" kind="show" identifier="toEmployeeViewController" id="9mm-ZA-aFl"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Home" style="plain" id="w8i-LL-Bft">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaq-1G-oio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="891.90404797601207"/>
+            <point key="canvasLocation" x="-953" y="1108"/>
         </scene>
         <!--Availability View Controller-->
         <scene sceneID="PMp-mD-PjX">
@@ -212,6 +212,15 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Afternoon 2-8" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-Uc-d01">
                                 <rect key="frame" x="194" y="235" width="94" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.70725697399999998" green="0.74027508760000005" blue="0.85354536800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close 8-12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-S4-kM3">
+                                <rect key="frame" x="296" y="236" width="94" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,7 +310,7 @@
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="f8w-6A-fFp" kind="show" id="e6E-ku-vws"/>
+                                                <segue destination="f8w-6A-fFp" kind="show" identifier="toEmployeeViewController" id="nrO-vD-rZH"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Home" style="plain" id="QqH-T8-Kfi">
@@ -316,6 +325,9 @@
                                                     <color key="titleShadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
+                                            <connections>
+                                                <segue destination="f8w-6A-fFp" kind="show" identifier="to EmployeeViewController" id="ts1-y0-3BQ"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -331,99 +343,91 @@
                                 </state>
                                 <connections>
                                     <action selector="submitPushed:" destination="xKN-ba-mhj" eventType="touchUpInside" id="ONK-ub-76A"/>
+                                    <segue destination="f8w-6A-fFp" kind="show" identifier="toEmployeeViewController" id="TuJ-Gs-fy6"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TGd-j2-tP7">
-                                <rect key="frame" x="320" y="282" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="teX-Nc-7kA">
-                                <rect key="frame" x="218" y="282" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close 8-12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-S4-kM3">
-                                <rect key="frame" x="296" y="236" width="94" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.70725697399999998" green="0.74027508760000005" blue="0.85354536800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kRj-JW-AwM">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kRj-JW-AwM" userLabel="Open0">
                                 <rect key="frame" x="116" y="282" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MKz-ek-1RY">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="teX-Nc-7kA" userLabel="Noon0">
+                                <rect key="frame" x="218" y="282" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TGd-j2-tP7" userLabel="Close0">
+                                <rect key="frame" x="320" y="282" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MKz-ek-1RY" userLabel="Open1">
                                 <rect key="frame" x="116" y="318" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6fj-q0-SjD">
-                                <rect key="frame" x="320" y="318" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcI-Ym-Tws">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcI-Ym-Tws" userLabel="Noon1">
                                 <rect key="frame" x="218" y="318" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tkg-dR-Mnf">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6fj-q0-SjD" userLabel="Close1">
+                                <rect key="frame" x="320" y="318" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tkg-dR-Mnf" userLabel="Open2">
                                 <rect key="frame" x="116" y="353" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-Nb-VKk">
-                                <rect key="frame" x="320" y="353" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-Kx-hQn">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-Kx-hQn" userLabel="Noon2">
                                 <rect key="frame" x="218" y="353" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ltT-6X-WeJ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RgS-Nb-VKk" userLabel="Close2">
+                                <rect key="frame" x="320" y="353" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ltT-6X-WeJ" userLabel="Open3">
                                 <rect key="frame" x="116" y="391" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-qV-yur">
-                                <rect key="frame" x="320" y="391" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-F1-mWW">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-F1-mWW" userLabel="Noon3">
                                 <rect key="frame" x="218" y="391" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-7u-m76">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-qV-yur" userLabel="Close3">
+                                <rect key="frame" x="320" y="391" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-7u-m76" userLabel="Open4">
                                 <rect key="frame" x="116" y="427" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Ic-Aq-g4U">
-                                <rect key="frame" x="320" y="427" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4hD-Vp-Dyk">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4hD-Vp-Dyk" userLabel="Noon4">
                                 <rect key="frame" x="218" y="427" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QT4-uX-qS8">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Ic-Aq-g4U" userLabel="Close4">
+                                <rect key="frame" x="320" y="427" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QT4-uX-qS8" userLabel="Open5">
                                 <rect key="frame" x="116" y="466" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WTf-fo-X1W">
-                                <rect key="frame" x="320" y="466" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-Ey-SYw">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-Ey-SYw" userLabel="Noon5">
                                 <rect key="frame" x="218" y="466" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VTy-Tl-dsJ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WTf-fo-X1W" userLabel="Close5">
+                                <rect key="frame" x="320" y="466" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VTy-Tl-dsJ" userLabel="Open6">
                                 <rect key="frame" x="116" y="505" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-45-7Ai">
-                                <rect key="frame" x="320" y="505" width="49" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GIk-TJ-Hyj" userLabel="Noon6">
+                                <rect key="frame" x="218" y="505" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GIk-TJ-Hyj">
-                                <rect key="frame" x="218" y="505" width="49" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-45-7Ai" userLabel="Close6">
+                                <rect key="frame" x="320" y="505" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                         </subviews>
@@ -434,32 +438,32 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="FrClose" destination="5Ic-Aq-g4U" id="vef-Rn-Uwk"/>
-                        <outlet property="FrNoon" destination="4hD-Vp-Dyk" id="p1l-dg-ZeL"/>
-                        <outlet property="FrOpen" destination="z2o-7u-m76" id="0fp-am-o0X"/>
-                        <outlet property="MoClose" destination="TGd-j2-tP7" id="3Wk-eC-Wh1"/>
-                        <outlet property="MoNoon" destination="teX-Nc-7kA" id="4Fz-5E-RDz"/>
-                        <outlet property="MoOpen" destination="kRj-JW-AwM" id="LIC-2H-0WE"/>
-                        <outlet property="SaClose" destination="WTf-fo-X1W" id="EmT-X0-aM5"/>
-                        <outlet property="SaNoon" destination="vrp-Ey-SYw" id="iRl-9J-5EB"/>
-                        <outlet property="SaOpen" destination="QT4-uX-qS8" id="K4t-0w-MvX"/>
-                        <outlet property="SuClose" destination="pcV-45-7Ai" id="TfZ-48-4hM"/>
-                        <outlet property="SuNoon" destination="GIk-TJ-Hyj" id="0e5-1L-1hw"/>
-                        <outlet property="SuOpen" destination="VTy-Tl-dsJ" id="3eH-lB-0io"/>
-                        <outlet property="ThClose" destination="Hzh-qV-yur" id="bCU-nj-Zh7"/>
-                        <outlet property="ThNoon" destination="Bq7-F1-mWW" id="9Hi-gG-VbV"/>
-                        <outlet property="ThOpen" destination="ltT-6X-WeJ" id="lxc-Ye-VAo"/>
-                        <outlet property="TuClose" destination="6fj-q0-SjD" id="bB6-2L-Ipl"/>
-                        <outlet property="TuNoon" destination="zcI-Ym-Tws" id="yw1-xw-g4Q"/>
-                        <outlet property="TuOpen" destination="MKz-ek-1RY" id="lPx-AY-zAB"/>
-                        <outlet property="WeClose" destination="RgS-Nb-VKk" id="KHH-dp-Cad"/>
-                        <outlet property="WeNoon" destination="x0b-Kx-hQn" id="en0-k8-hU6"/>
-                        <outlet property="WeOpen" destination="tkg-dR-Mnf" id="eZc-OY-yXG"/>
+                        <outlet property="Close0" destination="TGd-j2-tP7" id="YqM-TX-ytI"/>
+                        <outlet property="Close1" destination="6fj-q0-SjD" id="10h-P3-zcE"/>
+                        <outlet property="Close2" destination="RgS-Nb-VKk" id="3eJ-k1-xHP"/>
+                        <outlet property="Close3" destination="Hzh-qV-yur" id="Ec1-MG-yOx"/>
+                        <outlet property="Close4" destination="5Ic-Aq-g4U" id="fWc-Xo-G2w"/>
+                        <outlet property="Close5" destination="WTf-fo-X1W" id="wgV-Zp-Uld"/>
+                        <outlet property="Close6" destination="pcV-45-7Ai" id="rnX-wR-kod"/>
+                        <outlet property="Noon0" destination="teX-Nc-7kA" id="9Z7-pM-j7X"/>
+                        <outlet property="Noon1" destination="zcI-Ym-Tws" id="UU6-xr-CLV"/>
+                        <outlet property="Noon2" destination="x0b-Kx-hQn" id="OR5-Yt-vxW"/>
+                        <outlet property="Noon3" destination="Bq7-F1-mWW" id="fSt-yO-qU9"/>
+                        <outlet property="Noon4" destination="4hD-Vp-Dyk" id="pWN-hy-Qft"/>
+                        <outlet property="Noon5" destination="vrp-Ey-SYw" id="MFV-3f-Mx0"/>
+                        <outlet property="Noon6" destination="GIk-TJ-Hyj" id="d0i-83-GnI"/>
+                        <outlet property="Open0" destination="kRj-JW-AwM" id="7Rz-HW-iGq"/>
+                        <outlet property="Open1" destination="MKz-ek-1RY" id="ggs-kw-qRu"/>
+                        <outlet property="Open2" destination="tkg-dR-Mnf" id="Cxc-BQ-dui"/>
+                        <outlet property="Open3" destination="ltT-6X-WeJ" id="sPX-lY-35J"/>
+                        <outlet property="Open4" destination="z2o-7u-m76" id="fwh-70-L95"/>
+                        <outlet property="Open5" destination="QT4-uX-qS8" id="wwm-m3-1vL"/>
+                        <outlet property="Open6" destination="VTy-Tl-dsJ" id="yhr-Pm-s63"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzf-Ah-b02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="633.99014778325125"/>
+            <point key="canvasLocation" x="1954" y="423"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UbI-AZ-big">
@@ -615,7 +619,7 @@
                                     <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tT1-Wp-hEg" kind="show" identifier="EmployeeToSchedule" id="tWL-gE-l0t"/>
+                                    <segue destination="tT1-Wp-hEg" kind="show" identifier="toScheduleViewController" id="tWL-gE-l0t"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-h9-5H2">
@@ -630,7 +634,7 @@
                                     <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HH8-BT-ECv" kind="show" identifier="EmployeeToTimeOff" id="KZB-wJ-mYQ"/>
+                                    <segue destination="HH8-BT-ECv" kind="show" identifier="toTimeOffViewController" id="KZB-wJ-mYQ"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-KR-LEv">
@@ -645,7 +649,7 @@
                                     <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RKM-T7-Opq" kind="show" identifier="EmployeeToCoverage" id="Jl5-g0-s0k"/>
+                                    <segue destination="RKM-T7-Opq" kind="show" identifier="toCoverageViewController" id="Jl5-g0-s0k"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-k1-hxB">
@@ -660,7 +664,7 @@
                                     <color key="titleShadowColor" red="0.068145744502544403" green="0.17052164673805237" blue="0.85536646842956543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xKN-ba-mhj" kind="show" identifier="EmployeeToAvailability" id="B9e-Er-Z0H"/>
+                                    <segue destination="xKN-ba-mhj" kind="show" identifier="toAvailabilityViewController" id="B9e-Er-Z0H"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-rR-1UN">
@@ -719,7 +723,7 @@
                                                     <color key="titleShadowColor" red="0.2130688131" green="0.22320035099999999" blue="0.73412245509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="gt6-Wi-ckR"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toSignInViewController" id="gt6-Wi-ckR"/>
                                                 </connections>
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -748,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="led-LJ-crd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="619.34032983508246"/>
+            <point key="canvasLocation" x="562" y="606"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3UB-Mq-Iwn">
@@ -1022,7 +1026,7 @@
         <image name="timeoff.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e6E-ku-vws"/>
-        <segue reference="8fG-jC-f2u"/>
+        <segue reference="TuJ-Gs-fy6"/>
+        <segue reference="gt6-Wi-ckR"/>
     </inferredMetricsTieBreakers>
 </document>

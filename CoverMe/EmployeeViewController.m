@@ -7,6 +7,9 @@
 //
 
 #import "EmployeeViewController.h"
+#import "AvailabilityViewController.h"
+#import "SignInViewController.h"
+#import "ModelClass.h"
 
 @interface EmployeeViewController ()
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -23,15 +27,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidAppear:(BOOL)animated{
+    bool openswitch = [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0];
+    NSLog(@"M Employeeview avail switch = %d",openswitch);
+    bool openswitch2 = [[self.model.weekAvailability objectAtIndex:1] objectAtIndex:0];
+    NSLog(@"T Employeeview avail switch = %d",openswitch2);
+    bool openswitch3 = [[self.model.weekAvailability objectAtIndex:2] objectAtIndex:0];
+    NSLog(@"W Employeeview avail switch = %d",openswitch3);
 }
-*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toAvailabilityViewController"])
+    {
+        AvailabilityViewController *availVC = segue.destinationViewController;
+        availVC.model = self.model;
+    }
+}
 
 @end
