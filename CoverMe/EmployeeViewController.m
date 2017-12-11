@@ -9,6 +9,7 @@
 #import "EmployeeViewController.h"
 #import "AvailabilityViewController.h"
 #import "SwipeViewController.h"
+#import "ShiftViewController.h"
 #import "ModelClass.h"
 @import Firebase;
 
@@ -77,6 +78,11 @@
     {
         SwipeViewController *swipeVC = segue.destinationViewController;
         swipeVC.model = self.model;
+    }
+    if ([[segue identifier] isEqualToString:@"toShiftViewController"])
+    {
+        ShiftViewController *shiftVC = segue.destinationViewController;
+        shiftVC.model = self.model;
     }
 }
 

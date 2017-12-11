@@ -11,6 +11,7 @@
 		2BD1D870220F8141E54EF502 /* libPods-CoverMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B295DCC195DB3A618C7600 /* libPods-CoverMeUITests.a */; };
 		5A0A0D261FD9E9D800FB8020 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */; };
 		5A0A0D2B1FD9F2E500FB8020 /* assign2 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A0D2A1FD9F2E500FB8020 /* assign2 */; };
+		5A436DAC1FDE771A009D804D /* ShiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A436DAB1FDE771A009D804D /* ShiftViewController.m */; };
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
 		5AA2FAE01FDE4465005FC6A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AA2FADF1FDE4465005FC6A1 /* GoogleService-Info.plist */; };
 		5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */; };
@@ -55,6 +56,8 @@
 		5A0A0D241FD9E9D800FB8020 /* AvailabilityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
 		5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
 		5A0A0D2A1FD9F2E500FB8020 /* assign2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assign2; sourceTree = "<group>"; };
+		5A436DAA1FDE771A009D804D /* ShiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiftViewController.h; sourceTree = "<group>"; };
+		5A436DAB1FDE771A009D804D /* ShiftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiftViewController.m; sourceTree = "<group>"; };
 		5A680E541FC408CF002E1E9E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		5A680E581FC4111A002E1E9E /* EmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		5A680E591FC4111A002E1E9E /* EmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				5AD898321FDE6AAF00D90DB6 /* SwipeViewController.h */,
 				5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */,
 				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
+				5A436DAA1FDE771A009D804D /* ShiftViewController.h */,
+				5A436DAB1FDE771A009D804D /* ShiftViewController.m */,
 				D8A59E1C1FB8DFAD00B4F9A5 /* LaunchScreen.storyboard */,
 				D8A59E1F1FB8DFAD00B4F9A5 /* Info.plist */,
 				5A680E541FC408CF002E1E9E /* images */,
@@ -528,6 +533,7 @@
 				5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */,
 				5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */,
 				5AD898341FDE6AAF00D90DB6 /* SwipeViewController.m in Sources */,
+				5A436DAC1FDE771A009D804D /* ShiftViewController.m in Sources */,
 				D8A59E131FB8DFAD00B4F9A5 /* AppDelegate.m in Sources */,
 				D8571E571FD9D17E003AF93D /* EmployerVC.m in Sources */,
 			);
