@@ -94,69 +94,7 @@ bool userNameCorrect;
             //keep track of the name on all pages.
             self.model = [ModelClass new];
             self.model.username = usernameEntered;
-            
         
-        /*
-            //pull up their availability calendar,
-            FIRDatabaseReference *refAvailCalendar = [[[[[FIRDatabase database] reference]
-                                                child:@"users"]
-                                               child:self.model.username]
-                                              child:@"avail"];
-        
-        
-            //put the availability information in the 2D array, stored in the model delegate
-            self.model.weekAvailability = [NSMutableArray new];
-            for (int i = 0; i < 7; i++)
-            {
-                NSString *day = [NSString stringWithFormat:@"%d",i];
-//                NSLog(@"day = %@", day);
-                FIRDatabaseReference *refOpen = [[refAvailCalendar child:day] child:@"0"];
-                FIRDatabaseReference *refNoon = [[refAvailCalendar child:day] child:@"1"];
-                FIRDatabaseReference *refClose = [[refAvailCalendar child:day] child:@"2"];
-                
-                __block bool availableForOpen = false;
-                __block bool availableForNoon =false;
-                __block bool availableForClose = false;
-                
-                [refOpen observeSingleEventOfType:FIRDataEventTypeValue
-                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-                 {
-                     availableForOpen =[snapshot.value boolValue];
-                     NSLog(@"available for open = %d, with parentheses = %@", availableForOpen, @(availableForOpen));
-                 }
-                 ];
-                [refNoon observeSingleEventOfType:FIRDataEventTypeValue
-                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-                 {
-                      availableForNoon = [snapshot.value boolValue];
-                 }
-                 ];
-                [refClose observeSingleEventOfType:FIRDataEventTypeValue
-                                         withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-                 {
-                      availableForClose = [snapshot.value boolValue];
-                 }
-                 ];
-     
-                
-                //update model week availability
-                NSMutableArray *avails = [NSMutableArray new];
-                [avails insertObject:@(availableForOpen) atIndex:0];
-                [avails insertObject:@(availableForNoon) atIndex:1];
-                [avails insertObject:@(availableForClose) atIndex:2];
-//                NSLog(@"object in avals = %@", [avails objectAtIndex:0]);
-                
-                
-                [self.model.weekAvailability insertObject: avails atIndex:i];
-                
-                
-
-            }//end for loop
-         */
-
-//            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0]);
-//            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:1] objectAtIndex:0]);
-
             if(isAdmin) [self performSegueWithIdentifier:@"toEmployerViewController" sender:sender];
             
             else [self performSegueWithIdentifier:@"toEmployeeViewController" sender:sender];

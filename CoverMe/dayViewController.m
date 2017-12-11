@@ -7,6 +7,7 @@
 //
 
 #import "dayViewController.h"
+#import "EmployerVC.h"
 @import Firebase;
 
 @interface dayViewController ()
@@ -80,7 +81,7 @@
     
 }
 
-//function to sinc employer's schedule chosing to each employee's shift array
+//function to sync employer's schedule chosing to each employee's shift array
 -(void)viewWillDisappear:(BOOL)animated{
     NSString *dayString = [NSString stringWithFormat:@"%lu", (unsigned long)self.pageIndex];
     
@@ -114,48 +115,54 @@
 
     
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)viewDidAppear:(BOOL)animated{
     [self.pageNavigator setCurrentPage:self.pageIndex];
     //self.employeeUserNames = [[NSMutableArray alloc] init];
     self.dayText.text = self.dayStr;
     
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     _ref = [[FIRDatabase database] reference];
-    
-    FIRDatabaseReference *refEmployer = [[[[[FIRDatabase database] reference]
+
+    FIRDatabaseReference *refEmployer = [[[_ref
                                             child:@"users"]
                                            child:self.model.username]
                                           child:@"employees"];
 
-    //iterating through employer's list of employees
+//    iterating through employer's list of employees
     [refEmployer observeSingleEventOfType:FIRDataEventTypeValue
                                      withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
          {
              int employeeNum = 0;
+
              for ( FIRDataSnapshot *child in snapshot.children) {
-                 //NSLog(@"child.key = %@",child.value);
                  NSString *employeeUserName = child.value;
-                 
+
                  FIRDatabaseReference *refEmployee = [[[_ref child:@"users"] child:employeeUserName] child:@"name"];
-                 
+
                  //once the username of employee is known, set text box as their name
                  [refEmployee observeSingleEventOfType:FIRDataEventTypeValue
                                              withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
                   {
-                      //NSLog(@"%@", snapshot);
                       //set text box as employee's name
                       [self setEmployeeName:snapshot.value employeeIndex:employeeNum];
                   }];
-                 
-                 //set UIswitch button by refering the employee's availabilities
+
+                 //set UIswitch for each of 3 shifts button by referencing the employee's availabilities
                  for(int i =0; i < 3; i ++){
                      NSString *dayIndex = [NSString stringWithFormat:@"%lu", (unsigned long)self.pageIndex];
                      NSString *timeIndex = [NSString stringWithFormat:@"%d", i];
+
                      FIRDatabaseReference *refEmployeeAvail = [[[[[_ref child:@"users"] child:employeeUserName] child:@"avail"] child:dayIndex] child: timeIndex];
+
                      [refEmployeeAvail observeSingleEventOfType: FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-                         bool avail = [snapshot.value boolValue];
+                         if(snapshot.exists){
+                         bool avail = [snapshot.value boolValue];   
                          [self setUISwitch:employeeNum time:i availability:avail];
+                         }
                      }];
                  }
 
@@ -171,14 +178,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"toEmployerVC"])
+    {
+        EmployerVC *employerVC = segue.destinationViewController;
+        employerVC.model = self.model;
+    }
+    
 }
-*/
 
 @end

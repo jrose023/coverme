@@ -13,4 +13,5 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (nonatomic) ModelClass *model;
+
 @end

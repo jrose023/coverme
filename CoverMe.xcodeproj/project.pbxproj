@@ -11,12 +11,11 @@
 		2BD1D870220F8141E54EF502 /* libPods-CoverMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B295DCC195DB3A618C7600 /* libPods-CoverMeUITests.a */; };
 		5A0A0D261FD9E9D800FB8020 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */; };
 		5A0A0D2B1FD9F2E500FB8020 /* assign2 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A0D2A1FD9F2E500FB8020 /* assign2 */; };
-		5A0A0D2D1FD9FB6400FB8020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A0D2C1FD9FB6300FB8020 /* GoogleService-Info.plist */; };
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
-		5AE851EA1FD9D518004574C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */; };
+		5AA2FAE01FDE4465005FC6A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AA2FADF1FDE4465005FC6A1 /* GoogleService-Info.plist */; };
+		5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */; };
+		5AD898341FDE6AAF00D90DB6 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */; };
 		5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405E1FD87B65000DDB5F /* ModelClass.m */; };
-		5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA40601FD87B66000DDB5F /* TimeSlot.m */; };
-		5AF93EC01FCF5A160083FDE2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF93EBF1FCF5A160083FDE2 /* User.m */; };
 		5E9191801FDDE596004639BA /* SchedulePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91917F1FDDE596004639BA /* SchedulePageViewController.m */; };
 		5E9191831FDDEBB1004639BA /* dayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9191821FDDEBB1004639BA /* dayViewController.m */; };
 		D8571E571FD9D17E003AF93D /* EmployerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8571E561FD9D17E003AF93D /* EmployerVC.m */; };
@@ -56,17 +55,16 @@
 		5A0A0D241FD9E9D800FB8020 /* AvailabilityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
 		5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
 		5A0A0D2A1FD9F2E500FB8020 /* assign2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assign2; sourceTree = "<group>"; };
-		5A0A0D2C1FD9FB6300FB8020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5A680E541FC408CF002E1E9E /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		5A680E581FC4111A002E1E9E /* EmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		5A680E591FC4111A002E1E9E /* EmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
-		5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		5AEA405D1FD87B65000DDB5F /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
+		5AA2FADF1FDE4465005FC6A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5AD8982F1FDE69A200D90DB6 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		5AD898321FDE6AAF00D90DB6 /* SwipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
+		5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		5AEA405E1FD87B65000DDB5F /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
-		5AEA40601FD87B66000DDB5F /* TimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlot.m; sourceTree = "<group>"; };
 		5AEA40611FD87B66000DDB5F /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
-		5AF93EBE1FCF5A160083FDE2 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		5AF93EBF1FCF5A160083FDE2 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5E91917E1FDDE596004639BA /* SchedulePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchedulePageViewController.h; sourceTree = "<group>"; };
 		5E91917F1FDDE596004639BA /* SchedulePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchedulePageViewController.m; sourceTree = "<group>"; };
 		5E9191811FDDEBB1004639BA /* dayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dayViewController.h; sourceTree = "<group>"; };
@@ -171,15 +169,11 @@
 			isa = PBXGroup;
 			children = (
 				D8A59E201FB8DFAD00B4F9A5 /* main.m */,
+				5AA2FADF1FDE4465005FC6A1 /* GoogleService-Info.plist */,
 				D8A59E111FB8DFAD00B4F9A5 /* AppDelegate.h */,
 				D8A59E121FB8DFAD00B4F9A5 /* AppDelegate.m */,
-				5AE851E91FD9D517004574C0 /* GoogleService-Info.plist */,
 				5AEA40611FD87B66000DDB5F /* ModelClass.h */,
 				5AEA405E1FD87B65000DDB5F /* ModelClass.m */,
-				5AEA405D1FD87B65000DDB5F /* TimeSlot.h */,
-				5AEA40601FD87B66000DDB5F /* TimeSlot.m */,
-				5AF93EBE1FCF5A160083FDE2 /* User.h */,
-				5AF93EBF1FCF5A160083FDE2 /* User.m */,
 				D8A59E141FB8DFAD00B4F9A5 /* SignInViewController.h */,
 				D8A59E151FB8DFAD00B4F9A5 /* SignInViewController.m */,
 				D8571E561FD9D17E003AF93D /* EmployerVC.m */,
@@ -188,9 +182,12 @@
 				5A680E591FC4111A002E1E9E /* EmployeeViewController.m */,
 				5A0A0D241FD9E9D800FB8020 /* AvailabilityViewController.h */,
 				5A0A0D251FD9E9D800FB8020 /* AvailabilityViewController.m */,
-				5A0A0D2C1FD9FB6300FB8020 /* GoogleService-Info.plist */,
 				5A0A0D291FD9F28F00FB8020 /* Julie Assignment 2 */,
 				D8A59E1A1FB8DFAD00B4F9A5 /* Assets.xcassets */,
+				5AD8982F1FDE69A200D90DB6 /* ScheduleViewController.h */,
+				5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */,
+				5AD898321FDE6AAF00D90DB6 /* SwipeViewController.h */,
+				5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */,
 				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
 				D8A59E1C1FB8DFAD00B4F9A5 /* LaunchScreen.storyboard */,
 				D8A59E1F1FB8DFAD00B4F9A5 /* Info.plist */,
@@ -347,10 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0A0D2B1FD9F2E500FB8020 /* assign2 in Resources */,
-				5A0A0D2D1FD9FB6400FB8020 /* GoogleService-Info.plist in Resources */,
 				D8A59E1E1FB8DFAD00B4F9A5 /* LaunchScreen.storyboard in Resources */,
+				5AA2FAE01FDE4465005FC6A1 /* GoogleService-Info.plist in Resources */,
 				D8A59E1B1FB8DFAD00B4F9A5 /* Assets.xcassets in Resources */,
-				5AE851EA1FD9D518004574C0 /* GoogleService-Info.plist in Resources */,
 				D8A59E191FB8DFAD00B4F9A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,15 +519,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AEA40641FD87B66000DDB5F /* TimeSlot.m in Sources */,
 				5A0A0D261FD9E9D800FB8020 /* AvailabilityViewController.m in Sources */,
 				D8A59E161FB8DFAD00B4F9A5 /* SignInViewController.m in Sources */,
 				5E9191831FDDEBB1004639BA /* dayViewController.m in Sources */,
 				5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */,
 				5E9191801FDDE596004639BA /* SchedulePageViewController.m in Sources */,
 				D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */,
-				5AF93EC01FCF5A160083FDE2 /* User.m in Sources */,
 				5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */,
+				5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */,
+				5AD898341FDE6AAF00D90DB6 /* SwipeViewController.m in Sources */,
 				D8A59E131FB8DFAD00B4F9A5 /* AppDelegate.m in Sources */,
 				D8571E571FD9D17E003AF93D /* EmployerVC.m in Sources */,
 			);

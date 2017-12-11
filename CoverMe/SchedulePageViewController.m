@@ -21,9 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     days = @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday", @"Sunday"];
-    // Do any additional setup after loading the view.
     
-    self.dataSource = self;
+    self.dataSource = self; //navigation by swiping
     dayViewController *initialVC = (dayViewController*)[self viewControllerAtIndex:0];
     initialVC.model = self.model;
     
@@ -32,10 +31,7 @@
     [self setViewControllers:dayViewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 //helper method
 -(UIViewController *) viewControllerAtIndex:(NSUInteger) index{
@@ -71,15 +67,6 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)dayText:(id)sender {
 }
