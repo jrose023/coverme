@@ -102,6 +102,7 @@
         NSLog(@"Attention: %@", snapshot.value);
     }];
     */
+    _ref = [[FIRDatabase database] reference];
     
     for (int i = 0; i < 7; i++)
     {

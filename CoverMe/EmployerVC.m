@@ -7,6 +7,7 @@
 //
 
 #import "EmployerVC.h"
+#import "SchedulePageViewController.h"
 
 @interface EmployerVC ()
 
@@ -23,6 +24,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toSetScheduleViewController"])
+    {
+        SchedulePageViewController *scheduleVC = segue.destinationViewController;
+        scheduleVC.model = self.model;
+    }
+}
+
 
 /*
 #pragma mark - Navigation

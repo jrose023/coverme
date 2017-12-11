@@ -24,91 +24,86 @@ bool isAdmin;
 bool isExists;
 int counter=0;
 bool userNameCorrect;
+
 - (IBAction)pushedSignIn:(id)sender {
-    
     NSString *usernameEntered =[self.username text];
     NSString *passwordEntered=[self.password text];
-
-//    NSString *usernameEntered =@"nrg294";
-//    NSString *passwordEntered=@"hi";
-    
-//    NSLog(@"_model.username = %@",  self.model.username);
     
     //Check if the there is a user that exist with the username entered
     //search firebse "users" database for the usernameEntered
     _ref = [[FIRDatabase database] reference];
-    if ([usernameEntered length] >0 && [passwordEntered length] >0){
-        
-        
-        FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
-                                                  child:@"users"]
-                                                 child:usernameEntered];
-        [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
-                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-         {
-             counter++;
-             isExists = snapshot.exists;
-             userNameCorrect=isExists;
-//             NSLog(@"hi3");
-         }];
-        
-        //search firebase "users" database to validate password given the usernameEntered
-        FIRDatabaseReference *refUniqPassword = [[[[[FIRDatabase database] reference]
-                                                   child:@"users"]
-                                                  child:usernameEntered]
-                                                 child:@"password"];
-        [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
-                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-         {
-             counter++;
-             NSString *password= snapshot.value;
-             isExists = isExists && [password isEqualToString:passwordEntered];
-//             NSLog(@"hi2");
-             
-             
-         }];
-        //search firebase to determine whether user is admin or not
-        FIRDatabaseReference *refAdminBool = [[[[[FIRDatabase database] reference]
-                                                child:@"users"]
-                                               child:usernameEntered]
-                                              child:@"admin"];
-        
-        
-        [refAdminBool observeSingleEventOfType:FIRDataEventTypeValue
-                                     withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
-         {
-             counter++;
-             NSString *admin= snapshot.value;
-             isAdmin = [admin isEqualToString:@"TRUE"];
-             //NSLog(@"this is the admin log %d, %@",isAdmin, admin);
-//             NSLog(@"hi1");
-             
-         }];
+    
+    //check if anything was entered in username and password
+    if ([usernameEntered length] == 0 || [passwordEntered length] == 0){
+        return;
     }
     
-    if(counter==3){
+    //check if username exists
+    FIRDatabaseReference *refUniqUsername = [[[[FIRDatabase database] reference]
+                                              child:@"users"] child:usernameEntered];
+    [refUniqUsername observeSingleEventOfType:FIRDataEventTypeValue
+                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+     {
+         counter++;
+         userNameCorrect = snapshot.exists;
+     }];
+    if(!userNameCorrect){
+        NSLog(@"No such user name in database");
+        return;
+    }
+    
+    //search firebase "users" database to validate password given the usernameEntered
+    FIRDatabaseReference *refUniqPassword = [[[[[FIRDatabase database] reference]
+                                               child:@"users"]
+                                              child:usernameEntered]
+                                             child:@"password"];
+    [refUniqPassword observeSingleEventOfType:FIRDataEventTypeValue
+                                    withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+     {
+         counter++;
+         NSString *password= snapshot.value;
+         isExists = [password isEqualToString:passwordEntered];
+     }];
+    if(!isExists){
+        NSLog(@"The password is incorrect");
+        return;
+    }
+    
+    //check if admin
+    FIRDatabaseReference *refAdminBool = [[[[[FIRDatabase database] reference]
+                                            child:@"users"]
+                                           child:usernameEntered]
+                                          child:@"admin"];
+    
+    
+    [refAdminBool observeSingleEventOfType:FIRDataEventTypeValue
+                                 withBlock:^(FIRDataSnapshot * _Nonnull snapshot)
+     {
+         counter++;
+         id adminVal = snapshot.value;
+         isAdmin = [snapshot.value boolValue];
+         //NSLog(@"%@",adminVal);
+         //isAdmin = (adminVal == @"1");
+         NSLog(isAdmin ? @"Yes" : @"No");
+     }];
+        
+        
+    if(counter > 3){
         counter=0;
-        if (!isExists) {
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle: @"Incorrect Username or Password!"
-                                                                           message:@"Please Try Again."
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                                  handler:^(UIAlertAction * action) {}];
-            [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-        else{
+
             //keep track of the name on all pages.
             self.model = [ModelClass new];
             self.model.username = usernameEntered;
             
-            
+        
+        /*
             //pull up their availability calendar,
             FIRDatabaseReference *refAvailCalendar = [[[[[FIRDatabase database] reference]
                                                 child:@"users"]
                                                child:self.model.username]
                                               child:@"avail"];
-            
+        
+        
             //put the availability information in the 2D array, stored in the model delegate
             self.model.weekAvailability = [NSMutableArray new];
             for (int i = 0; i < 7; i++)
@@ -142,14 +137,7 @@ bool userNameCorrect;
                       availableForClose = [snapshot.value boolValue];
                  }
                  ];
-                /* HAVING ISSUE HERE!
-                 * everything above this point works fine and all log statements will show that the data
-                 * in availabileForOpen/Noon/Close is accurate and reflects what is in Firebase
-                 *
-                 * putting it in the self.model.availbilty array is causing issues
-                 * you apparently cant have an array of booleans which means they need to be wrapped in @()
-                 * which makes them NSNumbers which is just confusing and thisngs arent outputting correctly
-                 */
+     
                 
                 //update model week availability
                 NSMutableArray *avails = [NSMutableArray new];
@@ -164,6 +152,7 @@ bool userNameCorrect;
                 
 
             }//end for loop
+         */
 
 //            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0]);
 //            NSLog(@"available from array = %@", [[self.model.weekAvailability objectAtIndex:1] objectAtIndex:0]);
@@ -171,10 +160,9 @@ bool userNameCorrect;
             if(isAdmin) [self performSegueWithIdentifier:@"toEmployerViewController" sender:sender];
             
             else [self performSegueWithIdentifier:@"toEmployeeViewController" sender:sender];
-        }
     }
     
-    
+
 }//end pushedSignIn
 
 

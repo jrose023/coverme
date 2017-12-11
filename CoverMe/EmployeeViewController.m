@@ -28,12 +28,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)viewDidAppear:(BOOL)animated{
+    /*
     bool openswitch = [[self.model.weekAvailability objectAtIndex:0] objectAtIndex:0];
     NSLog(@"M Employeeview avail switch = %d",openswitch);
     bool openswitch2 = [[self.model.weekAvailability objectAtIndex:1] objectAtIndex:0];
     NSLog(@"T Employeeview avail switch = %d",openswitch2);
     bool openswitch3 = [[self.model.weekAvailability objectAtIndex:2] objectAtIndex:0];
     NSLog(@"W Employeeview avail switch = %d",openswitch3);
+     */
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
