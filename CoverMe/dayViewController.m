@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *open2;
 @property (weak, nonatomic) IBOutlet UISwitch *noon2;
 @property (weak, nonatomic) IBOutlet UISwitch *close2;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageNavigator;
 
 
 @end
@@ -116,6 +117,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.pageNavigator setCurrentPage:self.pageIndex];
     //self.employeeUserNames = [[NSMutableArray alloc] init];
     self.dayText.text = self.dayStr;
     
