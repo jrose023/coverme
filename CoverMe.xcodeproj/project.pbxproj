@@ -15,7 +15,6 @@
 		5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A680E591FC4111A002E1E9E /* EmployeeViewController.m */; };
 		5AA2FAE01FDE4465005FC6A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AA2FADF1FDE4465005FC6A1 /* GoogleService-Info.plist */; };
 		5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */; };
-		5AD898341FDE6AAF00D90DB6 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */; };
 		5AEA40621FD87B66000DDB5F /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA405E1FD87B65000DDB5F /* ModelClass.m */; };
 		5E9191801FDDE596004639BA /* SchedulePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91917F1FDDE596004639BA /* SchedulePageViewController.m */; };
 		5E9191831FDDEBB1004639BA /* dayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9191821FDDEBB1004639BA /* dayViewController.m */; };
@@ -65,7 +64,6 @@
 		5AD8982F1FDE69A200D90DB6 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		5AD898321FDE6AAF00D90DB6 /* SwipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
-		5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
 		5AEA405E1FD87B65000DDB5F /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
 		5AEA40611FD87B66000DDB5F /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
 		5E91917E1FDDE596004639BA /* SchedulePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchedulePageViewController.h; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				5AD8982F1FDE69A200D90DB6 /* ScheduleViewController.h */,
 				5AD898301FDE69A200D90DB6 /* ScheduleViewController.m */,
 				5AD898321FDE6AAF00D90DB6 /* SwipeViewController.h */,
-				5AD898331FDE6AAF00D90DB6 /* SwipeViewController.m */,
 				D8A59E171FB8DFAD00B4F9A5 /* Main.storyboard */,
 				5A436DAA1FDE771A009D804D /* ShiftViewController.h */,
 				5A436DAB1FDE771A009D804D /* ShiftViewController.m */,
@@ -532,7 +529,6 @@
 				D8A59E211FB8DFAD00B4F9A5 /* main.m in Sources */,
 				5A680E5A1FC4111A002E1E9E /* EmployeeViewController.m in Sources */,
 				5AD898311FDE69A200D90DB6 /* ScheduleViewController.m in Sources */,
-				5AD898341FDE6AAF00D90DB6 /* SwipeViewController.m in Sources */,
 				5A436DAC1FDE771A009D804D /* ShiftViewController.m in Sources */,
 				D8A59E131FB8DFAD00B4F9A5 /* AppDelegate.m in Sources */,
 				D8571E571FD9D17E003AF93D /* EmployerVC.m in Sources */,
