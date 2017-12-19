@@ -124,6 +124,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.pageNavigator setCurrentPage:self.pageIndex];
 
     _ref = [[FIRDatabase database] reference];
 

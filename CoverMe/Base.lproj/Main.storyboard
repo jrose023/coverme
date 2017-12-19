@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-802" y="364"/>
         </scene>
-        <!--Swipe View Controller-->
+        <!--Schedule Page View Controller-->
         <scene sceneID="etW-ix-jYo">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Ywa-kb-cU6" customClass="SwipeViewController" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Ywa-kb-cU6" customClass="SchedulePageViewController" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUz-8Y-3DF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="290"/>
@@ -770,6 +770,10 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6o2-H5-BQT" userLabel="Open0">
                                 <rect key="frame" x="116" y="294" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <color key="onTintColor" red="1" green="0.64210635419999995" blue="0.52795124049999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Tq-IRG">
@@ -799,6 +803,9 @@
                                                 </state>
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="f8w-6A-fFp" kind="show" id="gSA-h2-jeo"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Home" style="plain" id="YDn-K0-1eJ">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Z0-Zv-YKP">
@@ -880,8 +887,34 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.4875171559" green="0.56507063970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="MnH-g0-B1r"/>
                     </view>
+                    <connections>
+                        <outlet property="close0" destination="7ue-Ow-ahG" id="hfN-EE-9aS"/>
+                        <outlet property="close1" destination="v1i-bt-sY4" id="P5A-Hh-RQF"/>
+                        <outlet property="close2" destination="F5N-ks-59p" id="zwF-Od-mcK"/>
+                        <outlet property="close3" destination="NHJ-ru-rRq" id="aLD-kd-keY"/>
+                        <outlet property="close4" destination="gZ2-fo-5ah" id="odG-Ga-R7p"/>
+                        <outlet property="close5" destination="4zl-gG-xmG" id="g2r-Ef-YKd"/>
+                        <outlet property="close6" destination="vzk-Re-ha3" id="UuD-bd-Ud6"/>
+                        <outlet property="noon0" destination="h25-Rj-BbE" id="hA1-eF-xpz"/>
+                        <outlet property="noon1" destination="RZl-Re-abQ" id="Qqh-s4-tds"/>
+                        <outlet property="noon2" destination="HQ7-et-iaF" id="nQo-Wv-r8P"/>
+                        <outlet property="noon3" destination="0Ly-Mk-iQH" id="hY0-NE-LLM"/>
+                        <outlet property="noon4" destination="5Wu-cM-Zao" id="qix-p5-aWP"/>
+                        <outlet property="noon5" destination="rQW-R5-UDy" id="nnc-ll-3ib"/>
+                        <outlet property="noon6" destination="BzB-5m-i3N" id="ZBD-bF-a3y"/>
+                        <outlet property="open0" destination="6o2-H5-BQT" id="FBx-LD-uJY"/>
+                        <outlet property="open1" destination="W5h-1X-ZWz" id="g64-RE-b3K"/>
+                        <outlet property="open2" destination="Bcp-wk-djW" id="R88-Ud-Awf"/>
+                        <outlet property="open3" destination="jyi-mn-m4Q" id="2dk-tH-s6Z"/>
+                        <outlet property="open4" destination="eeG-jD-SZD" id="LKX-to-dbI"/>
+                        <outlet property="open5" destination="zIF-gl-d3S" id="M6O-iU-ikz"/>
+                        <outlet property="open6" destination="jHa-tg-Kdz" id="skj-mx-o08"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31B-UF-i82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1362,7 +1395,7 @@
                                     <navigationItem title="CoverMe" id="jqH-HW-i3E">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="rbn-vj-8Yw">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iTR-Ll-04m">
-                                                <rect key="frame" x="16" y="4.6666666666666679" width="73" height="35"/>
+                                                <rect key="frame" x="16" y="4.6666666666666679" width="47" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
@@ -1428,6 +1461,7 @@
                         <outlet property="open0" destination="ZAY-aj-Gxk" id="7wz-Mc-Zyk"/>
                         <outlet property="open1" destination="vyh-v5-JsE" id="bX2-66-TzN"/>
                         <outlet property="open2" destination="cAa-M5-Jas" id="dOu-c4-L4d"/>
+                        <outlet property="pageNavigator" destination="E9V-iC-oxa" id="CdZ-SV-q9w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKd-OL-iYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1445,7 +1479,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ngq-DK-9lI"/>
-        <segue reference="9mm-ZA-aFl"/>
-        <segue reference="gt6-Wi-ckR"/>
+        <segue reference="gSA-h2-jeo"/>
+        <segue reference="shG-kG-0Rp"/>
     </inferredMetricsTieBreakers>
 </document>
